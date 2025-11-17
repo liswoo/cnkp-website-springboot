@@ -494,6 +494,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+#hero h3 {
+  color: #555555;
+  margin: 5px 0 30px 0;
+  font-size: 20px;  /* h2보다 조금 작게 */
+  font-weight: 400;
+}
+
 #hero .btn-get-started {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -559,6 +566,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
     margin-bottom: 30px;
   }
+  
+  #hero h3 {
+     font-size: 14px;     
+     line-height: 22px;   
+     margin-bottom: 25px;  
+   }
+   
   #hero .btn-get-started, #hero .btn-watch-video {
     font-size: 13px;
   }
