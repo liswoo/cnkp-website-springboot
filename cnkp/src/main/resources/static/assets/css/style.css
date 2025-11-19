@@ -445,142 +445,97 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+#hero.hero-main {
   width: 100%;
-  height: 75vh;
-  background: url("../img/hero-bg.jpg") top left;
-  background-size: cover;
-  position: relative;
+  min-height: 90vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
 }
 
-#hero:before {
-  content: "";
-  background: rgba(255, 255, 255, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+#hero .hero-main__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  gap: 50px;
 }
 
-#hero .container {
-  position: relative;
-  padding-top: 132px;
-}
-
-@media (max-width: 992px) {
-  #hero .container {
-    padding-top: 58px;
-  }
-}
-
-#hero h1 {
-  margin: 0;
-  font-size: 48px;
+#hero .hero-main__content h1 {
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: 1.05;
   font-weight: 700;
-  line-height: 56px;
-  color: #222222;
-  font-family: "Poppins", sans-serif;
+  color: #0f172a;
+  margin-bottom: 28px;
 }
 
-#hero h1 span {
-  color: #106eea;
-}
-
-#hero h2 {
-  color: #555555;
-  margin: 5px 0 30px 0;
-  font-size: 24px;
-  font-weight: 400;
-}
-
-#hero h3 {
-  color: #555555;
-  margin: 5px 0 30px 0;
-  font-size: 20px;  /* h2보다 조금 작게 */
-  font-weight: 400;
-}
-
-#hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
+.hero-eyebrow {
+  font-size: 15px;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 28px;
-  border-radius: 4px;
-  transition: 0.5s;
-  color: #fff;
-  background: #106eea;
-}
-
-#hero .btn-get-started:hover {
-  background: #247cf0;
-}
-
-#hero .btn-watch-video {
-  font-size: 16px;
-  display: inline-block;
-  padding: 10px 25px 8px 40px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: #222222;
-  position: relative;
+  letter-spacing: 2px;
+  color: #1d4ed8;
+  margin-bottom: 16px;
   font-weight: 600;
 }
 
-#hero .btn-watch-video i {
-  color: #106eea;
-  font-size: 32px;
-  position: absolute;
-  left: 0;
-  top: 7px;
-  transition: 0.3s;
+.hero-lead {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 32px;
+  max-width: 520px;
 }
 
-#hero .btn-watch-video:hover {
-  color: #106eea;
+.hero-cta .btn-learn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  border-radius: 999px;
+  border: 2px solid #10a37f;
+  color: #0f172a;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
 }
 
-#hero .btn-watch-video:hover i {
-  color: #3b8af2;
+.hero-cta .btn-learn:hover {
+  background: #10a37f;
+  color: #fff;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
+.hero-main__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-  #hero {
-    height: 100vh;
-  }
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-  
-  #hero h3 {
-     font-size: 14px;     
-     line-height: 22px;   
-     margin-bottom: 25px;  
-   }
-   
-  #hero .btn-get-started, #hero .btn-watch-video {
-    font-size: 13px;
-  }
+#hero-animation {
+  width: clamp(280px, 40vw, 520px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 1px solid rgba(37, 123, 255, 0.12);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), rgba(182, 206, 255, 0.4));
+  box-shadow: 0 35px 70px rgba(32, 76, 163, 0.15);
+  position: relative;
+  overflow: hidden;
 }
 
-@media (max-height: 500px) {
-  #hero {
-    height: 120vh;
+#hero-animation canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  #hero.hero-main {
+    padding-top: 90px;
+    min-height: auto;
+  }
+  #hero .hero-main__inner {
+    gap: 30px;
+  }
+  #hero .hero-main__content h1 {
+    font-size: clamp(36px, 8vw, 54px);
   }
 }
 

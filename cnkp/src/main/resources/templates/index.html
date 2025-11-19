@@ -65,7 +65,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
-		  <li class="drop-down"><a href="#about">사업영역</a>
+		  <li class="drop-down"><a href="#about">Services</a>
               <ul>
                 <li><a href="#">AOE 솔루션</a></li>
                 <li><a href="#">데이터</a></li>
@@ -73,7 +73,7 @@
                 <li><a href="#">SI/SM</a></li>
               </ul>
           </li>
-		  <li class="drop-down"><a href="#services">레퍼런스</a>
+		  <li class="drop-down"><a href="#services">References</a>
 	            <ul>
 	              <li><a href="#">AOE 솔루션</a></li>
 	              <li><a href="#">데이터</a></li>
@@ -81,16 +81,15 @@
 	              <li><a href="#">SI/SM</a></li>
 	            </ul>
           </li>
-          <li><a href="#portfolio">프로젝트문의</a></li>
-		  <li class="drop-down"><a href="#team">채용정보</a>
-	            <ul>
-	              <li><a href="#">AOE 솔루션</a></li>
-	              <li><a href="#">데이터</a></li>
-	              <li><a href="#">AI/BI</a></li>
-	              <li><a href="#">SI/SM</a></li>
-	            </ul>
-          </li>
-		  <li class="drop-down"><a href="#contact">회사소개</a>
+          <li class="drop-down"><a href="#portfolio">Solution</a>
+            <ul>
+              <li><a href="#">AOE 솔루션</a></li>
+              <li><a href="#">데이터</a></li>
+              <li><a href="#">AI/BI</a></li>
+              <li><a href="#">SI/SM</a></li>
+            </ul>
+        </li>
+		  <li class="drop-down"><a href="#contact">About</a>
 	            <ul>
 	              <li><a href="#">AOE 솔루션</a></li>
 	              <li><a href="#">데이터</a></li>
@@ -123,14 +122,23 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1>"<span>데이터</span>를 자산으로, 기업을 <span>혁신</span>으로"
-      </h1>
-      <h3>우리는 데이터 전문성과 전략적 통찰로, 데이터의 시작부터 활용까지 End-to-End Data Architecture 서비스를 제공합니다.</h3>
-      <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">회사 소개</a>
-        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+  <section id="hero" class="hero-main">
+    <div class="container hero-main__inner" data-aos="fade-up" data-aos-delay="100">
+      <div class="hero-main__content">
+        <p class="hero-eyebrow">Data Intelligence Partner</p>
+        <h1>
+          Powering Tomorrow’s AI<br>
+          with Today’s Data
+        </h1>
+        <p class="hero-lead">
+          We help enterprises unlock data value with bold architecture, trusted pipelines, and insight-ready platforms that make data equity real.
+        </p>
+        <div class="hero-cta">
+          <a href="#about" class="btn-learn scrollto">Learn more</a>
+        </div>
+      </div>
+      <div class="hero-main__visual">
+        <div id="hero-animation" aria-hidden="true"></div>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -1028,6 +1036,8 @@
   <script src="assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
+  <script src="assets/js/hero-visual.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>

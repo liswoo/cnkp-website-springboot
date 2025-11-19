@@ -1,0 +1,128 @@
+:root {
+  color-scheme: light;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f6f8fd;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #fff, #eef2fb 60%, #e4e9f7 100%);
+  color: #101b36;
+}
+
+.hero-test {
+  width: min(1080px, 94vw);
+  min-height: 460px;
+  display: flex;
+  gap: clamp(32px, 6vw, 72px);
+  padding: clamp(32px, 6vw, 72px);
+  border-radius: 40px;
+  background: #ffffff;
+  box-shadow:
+    0 30px 60px rgba(14, 56, 146, 0.12),
+    0 10px 30px rgba(22, 64, 135, 0.08);
+  border: 1px solid rgba(15, 58, 134, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-test::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 30px;
+  pointer-events: none;
+  background: radial-gradient(circle at 15% 20%, rgba(40, 126, 255, 0.08), transparent 55%),
+    radial-gradient(circle at 85% 60%, rgba(24, 194, 188, 0.1), transparent 60%);
+  z-index: 0;
+}
+
+.hero-test__copy {
+  flex: 1 1 320px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-test__visual {
+  flex: 1 1 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-test__visual::before {
+  content: "";
+  position: absolute;
+  width: clamp(260px, 40vw, 460px);
+  height: clamp(260px, 40vw, 460px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(48, 115, 255, 0.15), transparent 70%);
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.eyebrow {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d7efb;
+  margin-bottom: 12px;
+}
+
+.hero-test h1 {
+  font-size: clamp(36px, 4.6vw, 56px);
+  margin: 0 0 18px;
+  color: #0f1d3d;
+}
+
+.hero-test .lead {
+  font-size: 19px;
+  line-height: 1.6;
+  max-width: 440px;
+  color: rgba(15, 29, 61, 0.72);
+}
+
+#hero-animation {
+  width: clamp(280px, 42vw, 480px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), rgba(182, 206, 255, 0.4));
+  box-shadow: 0 35px 70px rgba(32, 76, 163, 0.2);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(37, 123, 255, 0.12);
+}
+
+#hero-animation canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .hero-test {
+    flex-direction: column;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .hero-test__visual {
+    order: -1;
+    margin-bottom: 28px;
+  }
+
+  .hero-test__copy,
+  .hero-test .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
